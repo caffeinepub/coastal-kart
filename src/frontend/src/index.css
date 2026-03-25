@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("/assets/fonts/Figtree.woff2") format("woff2");
+  font-weight: 300 900;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.875rem;
+
+    /* Coastal Kart — Luxury Green */
+    --background: 1 0 0;
+    --foreground: 0.13 0.015 264;
+    --card: 1 0 0;
+    --card-foreground: 0.13 0.015 264;
+    --popover: 1 0 0;
+    --popover-foreground: 0.13 0.015 264;
+
+    /* Primary: rich green */
+    --primary: 0.52 0.16 145;
+    --primary-foreground: 1 0 0;
+
+    /* Secondary: warm gold/yellow — highlights only */
+    --secondary: 0.82 0.17 84;
+    --secondary-foreground: 0.13 0.015 264;
+
+    /* Accent: very light green tint */
+    --accent: 0.97 0.025 145;
+    --accent-foreground: 0.13 0.015 264;
+
+    --muted: 0.97 0.005 145;
+    --muted-foreground: 0.52 0.015 264;
+
+    --border: 0.93 0.008 145;
+    --input: 0.93 0.008 145;
+    --ring: 0.52 0.16 145;
+
+    /* Destructive */
+    --destructive: 0.59 0.22 27;
+    --destructive-foreground: 1 0 0;
+
+    /* Status colors */
+    --status-green: 0.72 0.19 149;
+    --status-red: 0.59 0.22 27;
+    --status-yellow: 0.82 0.18 84;
+    --status-orange: 0.72 0.2 46;
+    --status-purple: 0.58 0.18 290;
+    --status-blue: 0.53 0.12 244;
+
+    --chart-1: 0.52 0.16 145;
+    --chart-2: 0.63 0.14 152;
+    --chart-3: 0.72 0.19 149;
+    --chart-4: 0.82 0.17 84;
+    --chart-5: 0.58 0.18 290;
+
+    --sidebar: 1 0 0;
+    --sidebar-foreground: 0.13 0.015 264;
+    --sidebar-primary: 0.52 0.16 145;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.97 0.025 145;
+    --sidebar-accent-foreground: 0.13 0.015 264;
+    --sidebar-border: 0.93 0.008 145;
+    --sidebar-ring: 0.52 0.16 145;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-jakarta;
+    -webkit-font-smoothing: antialiased;
+    background-color: oklch(0.97 0.008 145);
+  }
+
+  html,
+  body,
+  #root {
+    min-height: 100%;
+  }
+}
